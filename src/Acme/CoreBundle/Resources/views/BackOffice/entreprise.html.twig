@@ -1,0 +1,22 @@
+{% extends '::baseb.html.twig' %}
+
+{% block body %}
+
+
+<br />
+
+{% for entreprise in entreprises %}
+<tr>
+	<td>
+ 		{{entreprise.nom | escape}}
+ 	</td>
+ 	<td>
+ 		{{entreprise.remarque | escape}}
+ 	</td>
+ </tr>
+ <br /><br />
+ 
+{% endfor %}
+
+<br/>
+{% endblock %}

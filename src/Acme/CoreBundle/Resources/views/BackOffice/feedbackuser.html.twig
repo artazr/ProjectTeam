@@ -1,0 +1,18 @@
+{% extends '::baseb.html.twig' %}
+
+{% block body %}
+
+{% for feedbackuser in feedbackusers %}
+ <tr>
+	<td>
+ 		<strong>Nom    :    </strong>{{feedbackuser.nom | escape}}
+ 	</td>
+		<strong>    => Remarque    :    </strong>
+ 	<td>
+ 		{{feedbackuser.remarque | escape}}
+ 	</td>
+ </tr>
+ <br /><br />
+{% endfor %}
+
+{% endblock %}

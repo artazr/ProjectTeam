@@ -1,0 +1,12 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+Voici la description de l'évènement de ProjectTeam <br />
+
+{% for description in descriptions %}
+ {{description.content | escape}}
+ 
+{% endfor %}
+
+  {% endblock %}

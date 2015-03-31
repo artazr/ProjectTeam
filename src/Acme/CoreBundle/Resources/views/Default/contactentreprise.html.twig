@@ -1,0 +1,13 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<form action="{{ path('acme_core_contactentreprise') }}" {{ form_enctype(form) }} method="POST">
+    {{ form_widget(form) }}
+    <div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-default">Cancel</button>
+    </div>
+</form>
+
+{% endblock %}
+

@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+Voici la Foire Aux Questions <br /><br />
+<br />
+
+
+{% for faq in faqs %}
+ {{faq.question | escape}}<br />
+ {{faq.answer | escape}}<br /><br />
+ 
+{% endfor %}
+
+  {% endblock %}
