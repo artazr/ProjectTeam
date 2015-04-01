@@ -11,9 +11,7 @@ use Acme\CoreBundle\Entity\FeedBack;
 use Acme\CoreBundle\Form\ContactEntrepriseType;
 use Acme\CoreBundle\Entity\ContactEntreprise;
 
-use Acme\CoreBundle\Entity\Description;
-
-use Acme\CoreBundle\Entity\Faq;
+use Acme\CoreBundle\Entity\Modif;
 
 class DefaultController extends Controller
 {
@@ -23,19 +21,60 @@ class DefaultController extends Controller
     {
         return $this->render('AcmeCoreBundle:Default:index.html.twig');
     }
+    public function faqAction()
+      {
+        $ModifRepository = $this->getDoctrine()
+            ->getRepository('AcmeCoreBundle:Modif');
+
+        
+        $faqs = $ModifRepository->getAllFaq();
+
+
+        return $this->render('AcmeCoreBundle:Default:faq.html.twig', array( 'faqs' => $faqs));
+    
+        
+
+    }
     public function descriptionAction()
       {
-        $DescriptionRepository = $this->getDoctrine()
-            ->getRepository('AcmeCoreBundle:Description');
+        $ModifRepository = $this->getDoctrine()
+            ->getRepository('AcmeCoreBundle:Modif');
 
-        $descriptions = $DescriptionRepository->getAllDescription();
-
+        
+        $descriptions = $ModifRepository->getAllDescription();
 
         return $this->render('AcmeCoreBundle:Default:description.html.twig', array( 'descriptions' => $descriptions));
+    
+        
+
     }
+
+     public function modifAction()
+      {
+        $ModifRepository = $this->getDoctrine()
+            ->getRepository('AcmeCoreBundle:Modif');
+
+        
+        $descriptions = $ModifRepository->getAllDescription();
+
+        return $this->render('AcmeCoreBundle:Default:description.html.twig', array( 'descriptions' => $descriptions));
+    
+        
+
+    }
+
+
+
     public function sponsorAction()
     {
-        return $this->render('AcmeCoreBundle:Default:sponsor.html.twig');
+         $ContactEntrepriseRepository = $this->getDoctrine()
+            ->getRepository('AcmeCoreBundle:ContactEntreprise');
+
+        $products = $ContactEntrepriseRepository->findAll();
+        
+        shuffle($products);
+
+        return $this->render('AcmeCoreBundle:Default:sponsor.html.twig', array( 'products' => $products));
     }
     public function contactAction()
     {
@@ -53,6 +92,8 @@ class DefaultController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($sponsor);
             $em->flush();
+                    return $this->redirect($this->generateUrl('acme_core_contactentreprise'));
+
         }
         return $this->render('AcmeCoreBundle:Default:contactentreprise.html.twig', array( 'form' => $form->createView() ));
     }
@@ -68,6 +109,8 @@ class DefaultController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($FeedBack);
             $em->flush();
+                    return $this->redirect($this->generateUrl('acme_core_feedback'));
+
         }
         return $this->render('AcmeCoreBundle:Default:feedback.html.twig', array( 'form' => $form->createView() ));
     }
@@ -77,18 +120,6 @@ class DefaultController extends Controller
 
         return $this->render('AcmeCoreBundle:Default:inscription.html.twig');
     }
-
-    public function faqAction()
-      {
-        $FaqRepository = $this->getDoctrine()
-            ->getRepository('AcmeCoreBundle:Faq');
-
-        $faqs = $FaqRepository->getAllFaq();
-
-
-        return $this->render('AcmeCoreBundle:Default:faq.html.twig', array( 'faqs' => $faqs));
-    }
-
 
 
 }

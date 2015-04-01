@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class FaqType extends AbstractType
+class ModifType extends AbstractType
 {
 
     /**
@@ -16,8 +16,9 @@ class FaqType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
 
-        $builder->add('question')
-                ->add('answer');
+        $builder->add('endroit', 'choice', array('choices' => array('f' => 'FAQ', 'd' => 'Description','i' => 'index', 'b' => 'feedback')))
+                ->add('contenu', 'textarea');
+                
                 
 
     }
@@ -29,7 +30,7 @@ class FaqType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Acme\CoreBundle\Entity\Faq'
+            'data_class' => 'Acme\CoreBundle\Entity\Modif'
         ));
     }
 
@@ -38,6 +39,6 @@ class FaqType extends AbstractType
      */
     public function getName()
     {
-        return 'acme_corebundle_faq';
+        return 'acme_corebundle_modif';
     }
 }

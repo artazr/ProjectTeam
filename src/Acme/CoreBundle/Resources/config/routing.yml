@@ -31,6 +31,10 @@ acme_core_faq:
     path:     /faq
     defaults: { _controller: AcmeCoreBundle:Default:faq }
 
+acme_core_modifResult:
+    path:     /resultatContenu/{endroit}
+    defaults: { _controller: AcmeCoreBundle:BackOffice:resultatContenu }
+
 
 #backoffice
 acme_core_backoffice:
@@ -57,6 +61,5 @@ acme_core_modif:
     path:     /admin/modif
     defaults: { _controller: AcmeCoreBundle:BackOffice:modif }
 
-acme_core_faqmodif:
-    path:     /admin/faqmodif
-    defaults: { _controller: AcmeCoreBundle:BackOffice:faqmodif }
+
+

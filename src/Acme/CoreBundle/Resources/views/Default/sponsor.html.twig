@@ -1,6 +1,10 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-Voici nos Sponsor
+
+{% for product in products %}
+    <img src="{{asset('logo/' ~product.imageName)}}" alt="" style="width:180px; height:180px; margin:10px;">
+
+{% endfor %}
 
 {% endblock %}

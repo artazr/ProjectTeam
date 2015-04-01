@@ -7,13 +7,13 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\HttpFoundation\File\File;
 
 /**
- * Description
+ * Modif
  *
- * @ORM\Table(name="description")
- * @ORM\Entity(repositoryClass="Acme\CoreBundle\Repository\DescriptionRepository")
+ * @ORM\Table(name="modif")
+ * @ORM\Entity(repositoryClass="Acme\CoreBundle\Repository\ModifRepository")
  * @Vich\Uploadable
  */
-class Description
+class Modif
 {
 
      /**
@@ -30,7 +30,17 @@ class Description
      *
      * @ORM\Column(name="content", type="text")
      */
-    protected $content;
+    protected $contenu;
+
+     /**
+     * @var text
+     *
+     * @ORM\Column(name="endroit", type="text")
+     */
+    protected $endroit;
+
+    
+
 
     /**
      * Constructor
@@ -52,25 +62,48 @@ class Description
     }
 
     /**
-     * Set content
+     * Set endroit
      *
-     * @param string $content
+     * @param string $endroit
      * @return Description
      */
-    public function setContent($content)
+    public function setEndroit($endroit)
     {
-        $this->content = $content;
+        $this->endroit = $endroit;
 
         return $this;
     }
 
     /**
-     * Get content
+     * Get endroit
      *
      * @return string 
      */
-    public function getContent()
+    public function getEndroit()
     {
-        return $this->content;
+        return $this->endroit;
+    }
+
+    /**
+     * Set contenu
+     *
+     * @param string $contenu
+     * @return Description
+     */
+    public function setContenu($contenu)
+    {
+        $this->contenu = $contenu;
+
+        return $this;
+    }
+
+    /**
+     * Get contenu
+     *
+     * @return string 
+     */
+    public function getContenu()
+    {
+        return $this->contenu;
     }
 }
