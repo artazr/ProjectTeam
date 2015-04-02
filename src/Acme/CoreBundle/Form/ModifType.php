@@ -16,7 +16,28 @@ class ModifType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
 
-        $builder->add('endroit', 'choice', array('choices' => array('f' => 'FAQ', 'd' => 'Description','i' => 'index','c' => 'contact','in' => 'inscription','b' => 'feedback','e' => 'contact Entreprise','s' => 'Sponsor')))
+        $builder->add('endroit', 'choice', array('choices' => 
+            array(
+                'Page Accueil' => array(
+                    'Accueil - Sponsor' => 'Sponsor',
+                    'Accueil - Inscription' => 'Inscription',
+                    'Accueil - Contact' => 'Contact',
+                    'Accueil - Junior ISEP' => 'Junior ISEP',
+                ),
+                'Page Description' => array(
+                    'Description' => 'Description',
+                    'Lien vidéo' => 'Lien vidéo',
+                    'Description - Inscription' => 'Inscription',
+                    'Description - Sponsor' => 'Sponsor',
+                    'Description - Partagez' => 'Partagez'
+                ),
+                'Page Sponsor' => array(
+                    'Sponsor' => 'Sponsor'
+                ),
+                'Page FAQ' => array(
+                    'FAQ' => 'FAQ'
+                )
+            )))
                 ->add('contenu', 'textarea');
                 
                 
