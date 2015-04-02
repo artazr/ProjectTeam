@@ -72,43 +72,33 @@
 
 
 {% block body %}
-{{contenu}}
 <br />
 			<div id="wrapper-grid">
 				<div class="square hvr-bounce-to-right" id="img1" >
 					<a href="{{ path('acme_core_description') }}" title="Description">
-						<h2 class="w">Description</h2>
-						<h4>Principe, but et récompense</h4>
+						{{ Inscription | raw }}
 					</a>
 				</div>
                 
                 <div class="square hvr-bounce-to-right" id="img2">
 					<a href="{{ path('acme_core_sponsor') }}" title="Description">
-						<h2 class="w">Sponsors</h2>
-						<h4>Partenaires de l'évenement</h4>
+						{{ Sponsor | raw }}
 					</a>
 								
 				</div>
                 
                 <div class="square hvr-bounce-to-right" id="img3">
 					<a href="http://www.juniorisep.com" title="Junior ISEP">
-						<h2 class="w">Qui sommes nous ?</h2>
-						<h4>Junior ISEP</h4>
+						{{ JuniorISEP | raw }}
 					</a>
 								
 				</div>
 
                 <div class="square hvr-bounce-to-right" id="img4">
 					<a href="{{ path('acme_core_contact') }}" title="Contact">
-						<h2 id="b" class="w">Contact</h2>
-						<h4>Etudiant | Entreprise</h4>
+						{{ Contact | raw }}
 					</a>
 							
 				</div>
 			</div>
-			
-
-
-
-
  {% endblock %}

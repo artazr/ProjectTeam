@@ -16,7 +16,7 @@
 										<header>
 											<h3>Trailer de l'evenement</h3>
 										</header>
-										<p>Integrer une video youtube ici</p>
+										<p>{{ lienVideo | raw }}</p>
 										
 									</section>
 									<section>
@@ -33,11 +33,9 @@
 
 							<!-- Content -->
 								<article id="content">
-									<header>
-										<h2>Description</h2>
-										<p>PROJECTeam est le premier évenement inter-ecole organisé par la JuniorISEP dans ses nouveaux locaux à Issy-les-moulineaux</p>
-									</header>
-									<p>{{contenu}}</p>
+
+									{{ description| raw }}
+
 								</article>
 
 						</div>
@@ -45,34 +43,18 @@
 					<div class="row features">
 						<section class="4u 12u(narrower) feature">
 							
-							<header>
-								<h3>Inscrivez-Vous</h3>
-							</header>
-							<p>Vous êtes intéréssés ? Participez !!</p>
-							<ul class="actions">
-                            <li class="break"><a href="{{ path('acme_core_contact') }}" class="button">Participer</a></li>
-							</ul>
+									{{ inscription | raw}}
+							
 						</section>
 						<section class="4u 12u(narrower) feature">
 							
-							<header>
-								<h3>Nos Sponsors</h3>
-							</header>
-							<p>Découvrez nos partenaires de ses évements et quelques lots à gagner.
-							Des lots d'une valeur de 50 à 250€ à gagner</p>
-							<ul class="actions">
-                            <li class="break"><a href="{{ path('acme_core_sponsor') }}" class="button">Nos SPonsors</a></li>
-							</ul>
+									{{ sponsor | raw}}
+
 						</section>
 						<section class="4u 12u(narrower) feature">
 
-							<header>
-								<h3>Partagez</h3>
-							</header>
-							<p>Have fun. Plus on est de fou, plus on rit. N'hésitez pas à partager l'evenement ! Et nous suivre sur facebook pour avoir des nouvelles sur l'evenement </p>
-							<ul class="actions">
-								<li><a href="#" class="button">Like and share</a></li>
-							</ul>
+									{{ partagez | raw}}
+
 						</section>
 					</div>
 				</div>

@@ -21,32 +21,46 @@ class DefaultController extends Controller
       {
              $ModifRepository = $this->getDoctrine()
                 ->getRepository('AcmeCoreBundle:Modif');
-            $contenu = $ModifRepository->getContenuFromEndroit('i');
+            $Inscription = $ModifRepository->getContenuFromEndroit('Accueil - Inscription');
+            $Sponsor = $ModifRepository->getContenuFromEndroit('Accueil - Sponsor');
+            $Contact = $ModifRepository->getContenuFromEndroit('Accueil - Contact');
+            $JuniorISEP = $ModifRepository->getContenuFromEndroit('Accueil - Junior ISEP');
 
-            return $this->render('AcmeCoreBundle:Default:index.html.twig', array( 'contenu' => $contenu ));
+            return $this->render('AcmeCoreBundle:Default:index.html.twig', array( 'Inscription' => $Inscription, 
+                'Sponsor' => $Sponsor, 'Contact' => $Contact, 'JuniorISEP' => $JuniorISEP,  ));
     }
-    public function faqAction($endroit='f')
+
+
+
+    public function faqAction()
       {
              $ModifRepository = $this->getDoctrine()
                 ->getRepository('AcmeCoreBundle:Modif');
-            $contenu = $ModifRepository->getContenuFromEndroit($endroit);
 
-            return $this->render('AcmeCoreBundle:Default:faq.html.twig', array( 'contenu' => $contenu ));
+            $FAQ = $ModifRepository->getContenuFromEndroit('FAQ');
+
+            return $this->render('AcmeCoreBundle:Default:faq.html.twig', array( 'FAQ' => $FAQ ));
     }
 
     
-   public function descriptionAction($endroit='d')
+   public function descriptionAction()
    {
 
             $ModifRepository = $this->getDoctrine()
                 ->getRepository('AcmeCoreBundle:Modif');
-            $contenu = $ModifRepository->getContenuFromEndroit($endroit);
 
-            return $this->render('AcmeCoreBundle:Default:description.html.twig', array( 'contenu' => $contenu ));
+            $description = $ModifRepository->getContenuFromEndroit('Description');
+            $lienVideo = $ModifRepository->getContenuFromEndroit('Lien vidéo');
+            $inscription = $ModifRepository->getContenuFromEndroit('Description - Inscription');
+            $sponsor = $ModifRepository->getContenuFromEndroit('Description - Sponsor');
+            $partagez = $ModifRepository->getContenuFromEndroit('Description - Partagez');
+
+            return $this->render('AcmeCoreBundle:Default:description.html.twig', array( 'description' => $description, 'lienVideo' => $lienVideo, 'inscription' => $inscription,
+             'sponsor' => $sponsor, 'partagez' => $partagez ));
     }
 
 
-    public function sponsorAction($endroit='s')
+    public function sponsorAction()
     {
          $ContactEntrepriseRepository = $this->getDoctrine()
             ->getRepository('AcmeCoreBundle:ContactEntreprise');
@@ -57,12 +71,13 @@ class DefaultController extends Controller
 
         $ModifRepository = $this->getDoctrine()
                 ->getRepository('AcmeCoreBundle:Modif');
-            $contenu = $ModifRepository->getContenuFromEndroit($endroit);
+        
+        $contenu = $ModifRepository->getContenuFromEndroit('Sponsor');
 
         return $this->render('AcmeCoreBundle:Default:sponsor.html.twig', array( 'products' => $products ,'contenu' => $contenu));
     }
    
-    public function contactEntrepriseAction(Request $request = null, $endroit = 'e' )
+    public function contactEntrepriseAction(Request $request = null)
     {
         $form = $this->createForm(new ContactEntrepriseType());
         $form->handleRequest($request);
@@ -74,16 +89,19 @@ class DefaultController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($sponsor);
             $em->flush();
-                    return $this->redirect($this->generateUrl('acme_core_contactentreprise'));
+            
+            return $this->redirect($this->generateUrl('acme_core_contactentreprise')); // POURQUOI ?
 
         }
          
         $ModifRepository = $this->getDoctrine()
                 ->getRepository('AcmeCoreBundle:Modif');
-            $contenu = $ModifRepository->getContenuFromEndroit($endroit);
+        $contenu = $ModifRepository->getContenuFromEndroit($endroit); // CHANGER
+
         return $this->render('AcmeCoreBundle:Default:contactentreprise.html.twig', array( 'form' => $form->createView() ,'contenu' => $contenu));
     }
-    public function feedbackAction(Request $request = null, $endroit = 'b')
+
+    public function feedbackAction(Request $request = null)
     {
         $form = $this->createForm(new FeedBackType());
         $form->handleRequest($request);
@@ -95,31 +113,24 @@ class DefaultController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($FeedBack);
             $em->flush();
-                    return $this->redirect($this->generateUrl('acme_core_feedback'));
+                    return $this->redirect($this->generateUrl('acme_core_feedback'));// POURQUOI ?
 
         }
         $ModifRepository = $this->getDoctrine()
                 ->getRepository('AcmeCoreBundle:Modif');
-            $contenu = $ModifRepository->getContenuFromEndroit($endroit);
+        $contenu = $ModifRepository->getContenuFromEndroit($endroit);  // CHANGER
+
         return $this->render('AcmeCoreBundle:Default:feedback.html.twig', array( 'form' => $form->createView() ,'contenu' => $contenu));
     }
   
-       public function inscriptionAction($endroit='in')
-      {
-             $ModifRepository = $this->getDoctrine()
-                ->getRepository('AcmeCoreBundle:Modif');
-            $contenu = $ModifRepository->getContenuFromEndroit($endroit);
-
-            return $this->render('AcmeCoreBundle:Default:inscription.html.twig', array( 'contenu' => $contenu ));
+    public function inscriptionAction()
+    {
+        return $this->render('AcmeCoreBundle:Default:inscription.html.twig');
     }
 
-     public function contactAction($endroit='c')
+    public function contactAction()
     {
-             $ModifRepository = $this->getDoctrine()
-                ->getRepository('AcmeCoreBundle:Modif');
-            $contenu = $ModifRepository->getContenuFromEndroit($endroit);
-
-            return $this->render('AcmeCoreBundle:Default:contact.html.twig', array( 'contenu' => $contenu ));
+        return $this->render('AcmeCoreBundle:Default:contact.html.twig');
     }
 
 
