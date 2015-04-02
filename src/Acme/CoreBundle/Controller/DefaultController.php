@@ -90,7 +90,6 @@ class DefaultController extends Controller
             $em->persist($sponsor);
             $em->flush();
             
-            return $this->redirect($this->generateUrl('acme_core_contactentreprise')); // POURQUOI ?
 
         }
 
@@ -109,7 +108,6 @@ class DefaultController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($FeedBack);
             $em->flush();
-                    return $this->redirect($this->generateUrl('acme_core_feedback'));// POURQUOI ?
 
         }
 
