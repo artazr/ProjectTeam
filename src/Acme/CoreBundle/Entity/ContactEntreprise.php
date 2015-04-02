@@ -31,6 +31,13 @@ class ContactEntreprise
      * @ORM\Column(name="remarque", type="text")
      */
     protected $remarque;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=255)
+     */
+    protected $email;
 
     /**
      * @var string
@@ -192,5 +199,28 @@ class ContactEntreprise
     public function getUpdatedAt()
     {
         return $this->updatedAt;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     * @return ContactEntreprise
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string 
+     */
+    public function getEmail()
+    {
+        return $this->email;
     }
 }

@@ -1,8 +1,19 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-{{contenu}}
+
 <form action="{{ path('acme_core_feedback') }}" {{ form_enctype(form) }} method="POST">
+	<table>
+		
+		<td> {{ form_label(form.email) }} </td>
+		<td> {{ form_widget(form.email) }}</td>
+
+		
+		<td> {{ form_label(form.remarque) }} </td>
+		<td> {{ form_widget(form.remarque) }}</td>
+
+
+	</table>
     {{ form_widget(form) }}
     <div>
         <button type="submit" class="btn btn-primary">Submit</button>

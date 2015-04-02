@@ -1,9 +1,25 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-{{contenu}}
+
 <form action="{{ path('acme_core_contactentreprise') }}" {{ form_enctype(form) }} method="POST">
-    {{ form_widget(form) }}
+    <table>
+		
+		<td> Nom entreprise : </td>
+		<td> {{ form_widget(form.nom) }}</td>
+
+		
+		<td> Votre logo : </td>
+		<td> {{ form_widget(form.imageFile) }}</td>
+		
+		<td> Email de contact : </td>
+		<td> {{ form_widget(form.email) }}</td>
+		
+		<td> Remarques , informations et participations </td>
+		<td> {{ form_widget(form.remarque) }}</td>
+
+
+	</table>
     <div>
         <button type="submit" class="btn btn-primary">Submit</button>
         <button type="button" class="btn btn-default">Cancel</button>

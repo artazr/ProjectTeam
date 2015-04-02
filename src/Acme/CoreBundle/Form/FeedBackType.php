@@ -16,7 +16,7 @@ class FeedBackType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
 
-        $builder->add('email')
+        $builder->add('email', 'email')
                 ->add('remarque');
 
     }

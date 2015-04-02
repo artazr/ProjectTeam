@@ -93,12 +93,8 @@ class DefaultController extends Controller
             return $this->redirect($this->generateUrl('acme_core_contactentreprise')); // POURQUOI ?
 
         }
-         
-        $ModifRepository = $this->getDoctrine()
-                ->getRepository('AcmeCoreBundle:Modif');
-        $contenu = $ModifRepository->getContenuFromEndroit($endroit); // CHANGER
 
-        return $this->render('AcmeCoreBundle:Default:contactentreprise.html.twig', array( 'form' => $form->createView() ,'contenu' => $contenu));
+        return $this->render('AcmeCoreBundle:Default:contactentreprise.html.twig', array( 'form' => $form->createView() ));
     }
 
     public function feedbackAction(Request $request = null)
@@ -116,11 +112,8 @@ class DefaultController extends Controller
                     return $this->redirect($this->generateUrl('acme_core_feedback'));// POURQUOI ?
 
         }
-        $ModifRepository = $this->getDoctrine()
-                ->getRepository('AcmeCoreBundle:Modif');
-        $contenu = $ModifRepository->getContenuFromEndroit($endroit);  // CHANGER
 
-        return $this->render('AcmeCoreBundle:Default:feedback.html.twig', array( 'form' => $form->createView() ,'contenu' => $contenu));
+        return $this->render('AcmeCoreBundle:Default:feedback.html.twig', array( 'form' => $form->createView()));
     }
   
     public function inscriptionAction()
