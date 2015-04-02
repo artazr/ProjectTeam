@@ -1,4 +1,12 @@
 {% extends '::base.html.twig' %}
+{% block title %}
+Contact
+{% endblock %}
+ {% block stylesheet %}
+ <link rel="stylesheet" href="{{ asset('css/perso.css') }}">
+
+ {% endblock %}
+
 {% block body %}
 
  <li><a href="{{ path('acme_core_contactentreprise') }}">Contact pour les entreprises</a></li>
