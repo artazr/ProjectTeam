@@ -1002,6 +1002,26 @@
 /****************************************
 /* EFFECT HOVER
 /*************************************
+/* Box Shadow Outset */
+.hvr-box-shadow-outset {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+}
+.hvr-box-shadow-outset:hover, .hvr-box-shadow-outset:focus, .hvr-box-shadow-outset:active {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+}
+
+
 /* Bounce To Right */
 .hvr-bounce-to-right {
   display: inline-block;

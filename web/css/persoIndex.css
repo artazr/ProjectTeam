@@ -1,0 +1,67 @@
+		.square{
+			float : left;
+			position: relative;
+			width: 48%;
+			height:190px;
+			padding-bottom: 1%;
+			margin:auto;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size:cover;	
+		}
+
+		#img1{
+			background-image: url(../images/isep1.png);
+			border-radius: 10px;
+			margin: 10px;
+		}
+
+		#img2{
+			border-radius: 10px;
+			margin: 10px;
+			background-image: url(../images/contact2.png);
+		}
+
+		#img3{
+			border-radius: 10px;
+			margin: 10px;
+			background-image: url(../images/junior.png);
+		}
+
+		#img4{
+			border-radius: 10px;
+			margin: 10px;
+			background-image: url(../images/contact1.png);
+		}
+
+		.w{
+			text-align: center;
+			color:white;
+			font-size: 30px;
+			font-family: Arial;
+		}
+
+		#img4 #b{
+			color:black;
+		}
+
+		h4{
+			text-align: center;
+			color:white;
+			font-size: 20px;
+			font-style: italic;
+		}
+		#img4 h4{
+			color:black;
+		}
+		
+
+
+.titre{
+	text-align:center;
+	font-size: 2em;
+	color:black;
+	padding:auto;
+}
+		
+
