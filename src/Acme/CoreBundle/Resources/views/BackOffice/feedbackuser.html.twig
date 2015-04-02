@@ -5,9 +5,9 @@
 {% for feedbackuser in feedbackusers %}
  <tr>
 	<td>
- 		<strong>Nom    :    </strong>{{feedbackuser.nom | escape}}
+ 		Nom    :    {{feedbackuser.nom | escape}}
  	</td>
-		<strong>    => Remarque    :    </strong>
+		    => Remarque    :    
  	<td>
  		{{feedbackuser.remarque | escape}}
  	</td>

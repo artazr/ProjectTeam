@@ -32,9 +32,9 @@ class FeedBack
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=255)
+     * @ORM\Column(name="email", type="string", length=255)
      */
-    protected $nom;
+    protected $email;
 
     /**
      * Constructor
@@ -100,5 +100,28 @@ class FeedBack
     public function getNom()
     {
         return $this->nom;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     * @return FeedBack
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string 
+     */
+    public function getEmail()
+    {
+        return $this->email;
     }
 }

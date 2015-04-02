@@ -1,6 +1,16 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-Voici nos Sponsor
+{{contenu}}
+
+<table style="margin-left: 60px;">
+	<tr>
+		<td>
+			{% for product in products %}
+   				 <img src="{{asset('logo/' ~product.imageName)}}" alt="" style="width:200px; height:200px; margin:10px;">
+			{% endfor %}
+		</td>
+	</tr>
+</table>
 
 {% endblock %}

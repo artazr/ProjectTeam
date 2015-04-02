@@ -16,4 +16,22 @@ Page de modif
 <br />
 
 <br/>
+<script>
+	function changeValue(){
+		var endroit = $('#acme_corebundle_modif_endroit').val();
+		var url = "{{ path('acme_core_modifResult' , { 'endroit' : 'endroit' }) }}";
+		url = url.replace("endroit", endroit);
+
+		$.ajax({
+		  url: url,
+		  success: function(reponse){
+		 	 $( '#acme_corebundle_modif_contenu' ).val( reponse );
+		  }
+		});
+	}
+	changeValue();
+	$('#acme_corebundle_modif_endroit').change(function(){
+		changeValue();
+	})
+</script>
 {% endblock %}

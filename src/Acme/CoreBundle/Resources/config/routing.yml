@@ -7,10 +7,6 @@ acme_core_description:
     path:     /description
     defaults: { _controller: AcmeCoreBundle:Default:description }
 
-acme_core_contact:
-    path:     /contact
-    defaults: { _controller: AcmeCoreBundle:Default:contact }
-
 acme_core_contactentreprise:
     path:     /contact/entreprise
     defaults: { _controller: AcmeCoreBundle:Default:contactEntreprise }
@@ -30,6 +26,14 @@ acme_core_inscription:
 acme_core_faq:
     path:     /faq
     defaults: { _controller: AcmeCoreBundle:Default:faq }
+
+acme_core_modifResult:
+    path:     /resultatContenu/{endroit}
+    defaults: { _controller: AcmeCoreBundle:BackOffice:resultatContenu }
+
+acme_core_contact:
+    path:     /contact
+    defaults: { _controller: AcmeCoreBundle:Default:contact }
 
 
 #backoffice
@@ -57,6 +61,5 @@ acme_core_modif:
     path:     /admin/modif
     defaults: { _controller: AcmeCoreBundle:BackOffice:modif }
 
-acme_core_faqmodif:
-    path:     /admin/faqmodif
-    defaults: { _controller: AcmeCoreBundle:BackOffice:faqmodif }
+
+

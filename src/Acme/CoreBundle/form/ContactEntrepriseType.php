@@ -4,6 +4,8 @@ namespace Acme\CoreBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Acme\CoreBundle\Entity\ContactEntreprise;
+
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class ContactEntrepriseType extends AbstractType
@@ -23,9 +25,8 @@ class ContactEntrepriseType extends AbstractType
             'download_link' => true, // not mandatory, default is true
                 ))
                 ->add('remarque');
-
-    }
-
+           
+}
 
     /**
      * @param OptionsResolverInterface $resolver

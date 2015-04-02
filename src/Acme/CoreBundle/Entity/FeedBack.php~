@@ -32,9 +32,9 @@ class FeedBack
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=255)
+     * @ORM\Column(name="email", type="string", length=255)
      */
-    protected $nom;
+    protected $email;
 
     /**
      * Constructor

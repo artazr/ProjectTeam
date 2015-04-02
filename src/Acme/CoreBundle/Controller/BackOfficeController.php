@@ -9,11 +9,8 @@ use Acme\CoreBundle\Entity\FeedBack;
 
 use Acme\CoreBundle\Entity\ContactEntreprise;
 
-use Acme\CoreBundle\Entity\Description;
-use Acme\CoreBundle\Form\DescriptionType;
-
-use Acme\CoreBundle\Entity\Faq;
-use Acme\CoreBundle\Form\FaqType;
+use Acme\CoreBundle\Entity\Modif;
+use Acme\CoreBundle\Form\ModifType;
 
 class BackOfficeController extends Controller
 {  
@@ -31,16 +28,19 @@ class BackOfficeController extends Controller
 
     public function modifAction(Request $request = null )
       {
-        $form = $this->createForm(new DescriptionType());
+        $form = $this->createForm(new ModifType());
         $form->handleRequest($request);
 
-        if ($form->isValid()) {
-            $description = new Description();
-            $description = $form->getData();
 
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($description);
-            $em->flush();
+        if ($form->isValid()) {
+            $endroit = $form["endroit"]->getData();
+            $contenu = $form["contenu"]->getData();
+            
+            $ModifRepository = $this->getDoctrine()
+                ->getRepository('AcmeCoreBundle:Modif');
+            $change = $ModifRepository->changeContenu($endroit, $contenu);
+
+
         }
         return $this->render('AcmeCoreBundle:BackOffice:modif.html.twig', array( 'form' => $form->createView() ));
     }
@@ -70,21 +70,13 @@ class BackOfficeController extends Controller
 
 	}
 
+    public function resultatContenuAction($endroit){
 
-    public function faqmodifAction(Request $request = null )
-      {
-        $form = $this->createForm(new FaqType());
-        $form->handleRequest($request);
+            $ModifRepository = $this->getDoctrine()
+                ->getRepository('AcmeCoreBundle:Modif');
+            $contenu = $ModifRepository->getContenuFromEndroit($endroit);
 
-        if ($form->isValid()) {
-            $faq = new FAq();
-            $faq = $form->getData();
-
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($faq);
-            $em->flush();
-        }
-        return $this->render('AcmeCoreBundle:BackOffice:faqmodif.html.twig', array( 'form' => $form->createView() ));
+            return $this->render('AcmeCoreBundle:BackOffice:resultatContenu.html.twig', array( 'contenu' => $contenu ));
     }
 
 }
