@@ -1,13 +1,19 @@
 {% extends '::base.html.twig' %}
+{% block title %}
+Contact Entreprise
+{% endblock %}
+ {% block stylesheet %}
+ <link rel="stylesheet" href="{{ asset('css/perso.css') }}">
 
+ {% endblock %}
 {% block body %}
 
 <form action="{{ path('acme_core_contactentreprise') }}" {{ form_enctype(form) }} method="POST">
     <table>
 		
-		<td> Nom entreprise : </td>
+		<td> Nom de l'entreprise : </td>
 		<td> {{ form_widget(form.nom) }}</td>
-
+		
 		
 		<td> Votre logo : </td>
 		<td> {{ form_widget(form.imageFile) }}</td>
