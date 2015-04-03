@@ -3,28 +3,29 @@
 FeedBack
 {% endblock %}
  {% block stylesheet %}
- <link rel="stylesheet" href="{{ asset('css/perso.css') }}">
+ <link rel="stylesheet" href="{{ asset('css/persoForm.css') }}">
+ <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
  {% endblock %}
 {% block body %}
 
 <form action="{{ path('acme_core_feedback') }}" {{ form_enctype(form) }} method="POST">
-	<table>
-		
-		<td> {{ form_label(form.email) }} </td>
-		<td> {{ form_widget(form.email) }}</td>
+<table>
 
-		
-		<td> {{ form_label(form.remarque) }} </td>
-		<td> {{ form_widget(form.remarque) }}</td>
+<div class="nom">{{ form_label(form.email) }}  </div>
+<div class="form">{{ form_widget(form.email) }} </div>
 
 
-	</table>
-    {{ form_widget(form) }}
-    <div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="button" class="btn btn-default">Cancel</button>
-    </div>
+<div class="nom">{{ form_label(form.remarque) }} </div>
+<div class="form"> {{ form_widget(form.remarque) }} </div>
+
+
+</table>
+    {{ form_widget(form) }}
+    <div>
+        <button type="submit" class="btn btn-primary">Valider</button>
+        <button type="button" class="btn btn-default">Annuler</button>
+    </div>
 </form>
 
  {% endblock %}

@@ -1,7 +1,7 @@
 		.square{
 			float : left;
 			position: relative;
-			width: 48%;
+			width: 35%;
 			height:190px;
 			padding-bottom: 1%;
 			margin:auto;
@@ -13,26 +13,26 @@
 		#img1{
 			background-image: url(../images/isep1.png);
 			border-radius: 10px;
-			margin: 10px;
+			margin: 40px;
 		}
 
 		#img2{
 			border-radius: 10px;
-			margin: 10px;
+			margin: 40px;
 			background-image: url(../images/entreprise1.jpg);
 		}
 
 		#img3{
 			border-radius: 10px;
-			margin: 10px;
-			background-image: url(../images/junior.png);
+			margin: 40px;
+			background-image: url(../images/junior3.png);
 			
 
 		}
 
 		#img4{
 			border-radius: 10px;
-			margin: 10px;
+			margin: 40px;
 			background-image: url(../images/contact2.png);
 		}
 
@@ -75,4 +75,6 @@
 	font-size:1.5em;
 	line-height: 1.5em;
 }
-
+#wrapper-grid{
+	margin-left:15%;
+}

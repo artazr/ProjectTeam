@@ -3,35 +3,39 @@
 Contact Entreprise
 {% endblock %}
  {% block stylesheet %}
- <link rel="stylesheet" href="{{ asset('css/perso.css') }}">
+ <link rel="stylesheet" href="{{ asset('css/persoForm.css') }}">
+ <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
  {% endblock %}
- 
+
 {% block body %}
 
 <form action="{{ path('acme_core_contactentreprise') }}" {{ form_enctype(form) }} method="POST">
-    <table>
-		
-		<td> Nom de l'entreprise : </td>
-		<td> {{ form_widget(form.nom) }}</td>
-		
-		
-		<td> Votre logo : </td>
-		<td> {{ form_widget(form.imageFile) }}</td>
-		
-		<td> Email de contact : </td>
-		<td> {{ form_widget(form.email) }}</td>
-		
-		<td> Remarques , informations et participations </td>
-		<td> {{ form_widget(form.remarque) }}</td>
+    <table>
+
+<div class="nom">Nom de l'entreprise : </div>
+ <div class="form">{{ form_widget(form.nom) }}</div>
+<br />
+
+<div class="nom"> Votre logo : (200*200)</div>
+ <div class="form">{{ form_widget(form.imageFile) }}</div>
+
+<br />
+
+<div class="nom">Email de contact : </div>
+<div class="form">{{ form_widget(form.email) }}</div>
+
+<br />
+
+<div class="nom">Remarques , informations et participations : </div>
+ <div class="form">{{ form_widget(form.remarque) }}</div>
 
 
-	</table>
-    <div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="button" class="btn btn-default">Cancel</button>
-    </div>
+</table>
+    <div>
+        <button type="submit">Valider</button>
+        <button type="button">Annuler</button>
+    </div>
 </form>
 
 {% endblock %}
-
