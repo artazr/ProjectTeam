@@ -1,7 +1,11 @@
 {% extends '::base.html.twig' %}
+{% block title %}
+Description
+{% endblock %}
+ {% block stylesheet %}
+ <link rel="stylesheet" href="{{ asset('css/perso.css') }}">
 
-{% block title%} Description {% endblock %}
-
+ {% endblock %}
  {% block body %}
 
 		<!-- Main -->
@@ -23,7 +27,7 @@
 										<header>
 											<h3>Evenement facebook - Page facebook</h3>
 										</header>
-										<p> <a href="https://facebook.com/JuniorISEP.PARIS" target ='_blank'>lien Facebook</a></p> <br />
+										<p> <a href="https://www.facebook.com/events/420917201404680/" target ='_blank'><img src="{{asset('images/ProjectTeam.png')}}" alt="event" height="340px" />Lien Facebook</a></p> <br />
 										
 									</section>
 								</section>
@@ -34,7 +38,7 @@
 							<!-- Content -->
 								<article id="content">
 
-									{{ description| raw }}
+									{{ description | raw }}
 
 								</article>
 

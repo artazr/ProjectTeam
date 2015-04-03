@@ -8,10 +8,13 @@
                 <meta name="description" content="Site officiel de Projecteam organisé par Junior ISEP" />
                 <meta name="keywords" content="" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-                    <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" />
-        
+                
 
-        {% block stylesheet %}{% endblock %}
+                
+                <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" />
+                {% block stylesheet %}{% endblock %}    
+    
+        
 
                 <link rel="stylesheet" href="{{ asset('css/flipclock.css') }}">
                 <script src="{{ asset('js/jquery.min.js') }}"></script>
@@ -27,10 +30,18 @@
             #nav li{
                 font-family: "Perso";
             }
-
+            #logo{
+                font-family: "Perso";   
+            }
             .clock{
                 margin-left:25%;
                 margin-right:25%;
+            }
+            #junior{
+                font-family: "Perso";
+                font-style: italic;
+                font-weight: 400;
+                font-size: 0.7em;
             }
         </style>
 
@@ -41,14 +52,17 @@
         <header>
             <div id="header-wrapper">
                 <div id="header" class="container">
-                    <h1 id="logo"><a href="{{ path('acme_core_homepage') }}">PROJECTeam</a></h1>
+                    <h1 id="logo"><a href="{{ path('acme_core_homepage') }}">
+                    PROJECTeam<br />
+                    <span id="junior">by JuniorISEP</span>
+                    </a></h1>
                     <!-- Nav -->
                     <nav id="nav">
                         <ul>
                             <li><a href="{{ path('acme_core_description') }}">Description</a></li>
                             <li><a href="{{ path('acme_core_sponsor') }}">Nos Sponsors</a></li>
                             <li class="break"><a href="{{ path('acme_core_contact') }}">Participer</a></li>
-                            <li><a href="{{ path('acme_core_faq') }}">FAQ</a></li>
+                            <li><a href="{{ path('acme_core_feedback') }}">Contactez nous</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -58,7 +72,7 @@
                         // Grab the current date
                              var currentDate = new Date();
                         // Set some date in the past. In this case, it's always been since Jan 1
-                             var futureDate  = new Date(currentDate.getFullYear(2015), 4, 23);
+                             var futureDate  = new Date(currentDate.getFullYear(2015), 4, 23, 8);
                         // Calculate the difference in seconds between the future and current date
                              var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
                          var clock = $('.clock').FlipClock(diff, {
@@ -108,7 +122,8 @@
                                     </ul>
                                 </div>
                                 <div class="6u">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2626.722378345169!2d2.27912331824646!3d48.82535825390707!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6707980bd3947%3A0xd54fb6c5e1933333!2s10+Rue+de+Vanves%2C+92170+Issy-les-Moulineaux!5e0!3m2!1sfr!2sfr!4v1427895007140" width="300" height="250" frameborder="0" style="border:0"></iframe>  
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2626.722378345169!2d2.27912331824646!3d48.82535825390707!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6707980bd3947%3A0xd54fb6c5e1933333!2s10+Rue+de+Vanves%2C+92170+Issy-les-Moulineaux!5e0!3m2!1sfr!2sfr!4v1427895007140" width="300" height="250" frameborder="0" style="border:0"
+                                     data-latitude="48.825044" data-longitude="2.280094"></iframe>  
                                 </div>
                             </div>
                         </div>

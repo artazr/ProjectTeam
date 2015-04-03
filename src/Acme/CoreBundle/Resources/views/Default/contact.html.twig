@@ -1,7 +1,31 @@
 {% extends '::base.html.twig' %}
+{% block title %}
+Contact
+{% endblock %}
+ {% block stylesheet %}
+ <link rel="stylesheet" href="{{ asset('css/perso.css') }}">
+
+ {% endblock %}
+
 {% block body %}
 
- <li><a href="{{ path('acme_core_contactentreprise') }}">Contact pour les entreprises</a></li>
- <li><a href="{{ path('acme_core_feedback') }}">feedback des étudiants</a></li>
-  <li><a href="{{ path('acme_core_inscription') }}">inscription pour les étudiants</a></li>
+
+ 
+	<a href="{{ path('acme_core_inscription') }}">	
+		<div class="case hvr-box-shadow-outset" id="etudiant">
+			<div class="content">
+ 			Je suis<br /> ÉTUDIANT
+ 			</div>
+ 		</div>
+ 	</a>
+ 	
+
+ 	<a href="{{ path('acme_core_contactentreprise') }}">	
+ 		<div class="case hvr-box-shadow-outset" id="entreprise">
+			<div class="content">
+ 			Je suis une <br /> ENTREPRISE
+ 			</div>
+ 		</div>
+	</a>
+
 {% endblock %}

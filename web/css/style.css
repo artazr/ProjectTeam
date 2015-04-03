@@ -69,7 +69,6 @@
 	{
 		color: inherit;
 		text-decoration: none;
-		border-bottom: dotted 1px #62676c;
 		-moz-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
 		-webkit-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
 		-o-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
@@ -633,7 +632,7 @@
 			display: block;
 			width: 100%;
 			height: 4em;
-			line-height: 4em;
+			line-height: 2em;
 			background: rgba(255,255,255,0.15);
 			border: solid 1px;
 			border-color: #fff;
@@ -642,10 +641,11 @@
 			border-radius: 0 0 0.35em 0.35em;
 			color: #fff;
 			display: inline-block;
-			font-weight: 600;
+			font-weight: 700;
 			letter-spacing: 3px;
 			text-align: center;
 			text-transform: uppercase;
+			font-size: 1.1em;
 
 		}
 
@@ -1002,6 +1002,26 @@
 /****************************************
 /* EFFECT HOVER
 /*************************************
+/* Box Shadow Outset */
+.hvr-box-shadow-outset {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+}
+.hvr-box-shadow-outset:hover, .hvr-box-shadow-outset:focus, .hvr-box-shadow-outset:active {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+}
+
+
 /* Bounce To Right */
 .hvr-bounce-to-right {
   display: inline-block;

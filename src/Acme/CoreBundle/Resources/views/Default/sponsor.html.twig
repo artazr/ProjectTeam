@@ -1,13 +1,20 @@
 {% extends '::base.html.twig' %}
+{% block title %}
+Sponsor
+{% endblock %}
+ {% block stylesheet %}
+ <link rel="stylesheet" href="{{ asset('css/perso.css') }}">
+
+ {% endblock %}
 
 {% block body %}
 {{contenu}}
 
-<table style="margin-left: 60px;">
+<table style="margin-left: 0px;">
 	<tr>
 		<td>
 			{% for product in products %}
-   				 <img src="{{asset('logo/' ~product.imageName)}}" alt="" style="width:200px; height:200px; margin:10px;">
+   				 <img src="{{asset('logo/' ~product.imageName)}}" alt="" style="width:200px; height:200px; margin-left:40px;">
 			{% endfor %}
 		</td>
 	</tr>

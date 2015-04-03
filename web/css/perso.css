@@ -1,0 +1,31 @@
+.case{
+	height:350px;
+	width:40%;
+	display:inline-block;
+	margin-left:7%;
+	vertical-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 15px;
+}
+
+#etudiant{
+	background-image: url(../images/student.png);
+
+}
+
+#entreprise{
+	background-image: url(../images/defense.png);
+
+}
+
+.content{
+	text-align: center;
+	color:white;
+	margin:auto;
+	margin-top:130px;
+	font-weight: 900;
+	font-size:1.7em;
+	line-height: 1.5em;
+}
+
