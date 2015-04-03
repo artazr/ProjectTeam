@@ -21,12 +21,12 @@ class DefaultController extends Controller
       {
              $ModifRepository = $this->getDoctrine()
                 ->getRepository('AcmeCoreBundle:Modif');
-            $Inscription = $ModifRepository->getContenuFromEndroit('Accueil - Inscription');
+            $Description = $ModifRepository->getContenuFromEndroit('Accueil - Description');
             $Sponsor = $ModifRepository->getContenuFromEndroit('Accueil - Sponsor');
             $Contact = $ModifRepository->getContenuFromEndroit('Accueil - Contact');
             $JuniorISEP = $ModifRepository->getContenuFromEndroit('Accueil - Junior ISEP');
 
-            return $this->render('AcmeCoreBundle:Default:index.html.twig', array( 'Inscription' => $Inscription, 
+            return $this->render('AcmeCoreBundle:Default:index.html.twig', array( 'Description' => $Description, 
                 'Sponsor' => $Sponsor, 'Contact' => $Contact, 'JuniorISEP' => $JuniorISEP,  ));
     }
 

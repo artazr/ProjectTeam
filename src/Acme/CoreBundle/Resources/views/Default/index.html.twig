@@ -1,52 +1,104 @@
 {% extends '::base.html.twig' %}
-{% block title %}
-Accueil
+
+{% block title%} Accueil {% endblock %}
+
+{% block stylesheet %}
+
+<style>
+		.square{
+			float : left;
+			position: relative;
+			width: 50%;
+			height:190px;
+			padding-bottom: 1%;
+			margin:auto;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size:cover;
+			/*border: 1px solid black;*/
+		}
+		.square:hover{
+			border: 2px solid black;
+
+		}
+		#img1{
+			background-color: #6f5499;
+		}
+		#img2{
+			background-color: #707676;
+		}
+		#img3{
+			background-color: #4d8a85;
+		}
+		#img4{
+			background-color: #fcfd00;
+		}
+		.w{
+			text-align: center;
+			color:white;
+			font-size: 30px;
+			font-family: Arial;
+		}
+
+		#img4 #b{
+			color:black;
+		}
+		h4{
+			text-align: center;
+			color:white;
+			font-size: 20px;
+			font-style: italic;
+		}
+		#img4 h4{
+			color:black;
+		}
+		
+		#madeby{
+			
+
+		}
+
+		#willbe{
+
+
+		}
+
+		
+
+
+	</style>
+
 {% endblock %}
- {% block stylesheet %}
- <link rel="stylesheet" href="{{ asset('css/persoindex.css') }}">
-
- {% endblock %}
-
-
 
 
 {% block body %}
-
+<br />
 			<div id="wrapper-grid">
-			
-				<a href="{{ path('acme_core_description') }}" title="Description">
-					<div class="square hvr-box-shadow-outset titre " id="img1">
-						<div class="content">
-						{{ Inscription | raw }}
-						</div>
-					</div>
-				</a>
+				<div class="square hvr-bounce-to-right" id="img1" >
+					<a href="{{ path('acme_core_description') }}" title="Description">
+						{{ Description | raw }}
+					</a>
+				</div>
                 
-               	<a href="{{ path('acme_core_sponsor') }}" title="Sponsors">	
-               		<div class="square hvr-box-shadow-outset titre" id="img2">
-               			<div class="content">
-						{{ Sponsor | raw }}	
-						</div>						
-					</div>
-                </a>
+                <div class="square hvr-bounce-to-right" id="img2">
+					<a href="{{ path('acme_core_sponsor') }}" title="Description">
+						{{ Sponsor | raw }}
+					</a>
+								
+				</div>
+                
+                <div class="square hvr-bounce-to-right" id="img3">
+					<a href="http://www.juniorisep.com" title="Junior ISEP">
+						{{ JuniorISEP | raw }}
+					</a>
+								
+				</div>
 
-				<a href="http://www.juniorisep.com" title="Junior ISEP">
-                	<div class="square hvr-box-shadow-outset titre" id="img3">
-                		<div class="content">
-						
-						</div>
-					</div>
-				</a>
-
-
-				<a href="{{ path('acme_core_contact') }}" title="Contact">
-                	<div class="square hvr-box-shadow-outset titre" id="img4">
-                		<div class="content">
+                <div class="square hvr-bounce-to-right" id="img4">
+					<a href="{{ path('acme_core_contact') }}" title="Contact">
 						{{ Contact | raw }}
-						</div>
-					</div>
-				</a>
-
+					</a>
+							
+				</div>
 			</div>
-
  {% endblock %}

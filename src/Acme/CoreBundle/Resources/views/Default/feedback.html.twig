@@ -9,7 +9,7 @@ FeedBack
  {% endblock %}
 {% block body %}
 
-<form action="{{ path('acme_core_feedback') }}" {{ form_enctype(form) }} method="POST">
+<form action="{{ path('acme_core_feedback') }}" {{ form_enctype(form) }} method="POST" style="margin-top: 30px;">
 <table>
 
 <div class="nom">{{ form_label(form.email) }}  </div>
@@ -20,12 +20,10 @@ FeedBack
 <div class="form"> {{ form_widget(form.remarque) }} </div>
 
 
-</table>
     {{ form_widget(form) }}
-    <div>
+    <div style="margin-bottom: 30px;">
         <button type="submit" class="btn btn-primary">Valider</button>
         <button type="button" class="btn btn-default">Annuler</button>
     </div>
-</form>
 
  {% endblock %}
