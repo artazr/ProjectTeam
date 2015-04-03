@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+{% block title %}
+Reception
+{% endblock %}
+ {% block body %}
+
+	{{ answer }}
+
+<script>
+	
+	var delay = 10000; //Your delay in milliseconds
+
+	setTimeout(function(){ window.location = '{{ path('acme_core_homepage') }}'; }, delay);
+
+</script>
+
+{% endblock %}

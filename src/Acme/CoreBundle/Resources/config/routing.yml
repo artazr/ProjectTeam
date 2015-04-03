@@ -35,6 +35,10 @@ acme_core_contact:
     path:     /contact
     defaults: { _controller: AcmeCoreBundle:Default:contact }
 
+acme_core_contactAnswer:
+    path:     /contactAnswer/{destinataire}
+    defaults: { _controller: AcmeCoreBundle:Default:contactAnswer }
+
 
 #backoffice
 acme_core_backoffice:

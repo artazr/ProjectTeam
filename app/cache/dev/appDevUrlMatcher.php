@@ -179,9 +179,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'acme_core_modifResult')), array (  '_controller' => 'Acme\\CoreBundle\\Controller\\BackOfficeController::resultatContenuAction',));
         }
 
-        // acme_core_contact
-        if ($pathinfo === '/contact') {
-            return array (  '_controller' => 'Acme\\CoreBundle\\Controller\\DefaultController::contactAction',  '_route' => 'acme_core_contact',);
+        if (0 === strpos($pathinfo, '/contact')) {
+            // acme_core_contact
+            if ($pathinfo === '/contact') {
+                return array (  '_controller' => 'Acme\\CoreBundle\\Controller\\DefaultController::contactAction',  '_route' => 'acme_core_contact',);
+            }
+
+            // acme_core_contactAnswer
+            if (0 === strpos($pathinfo, '/contactAnswer') && preg_match('#^/contactAnswer/(?P<destinataire>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'acme_core_contactAnswer')), array (  '_controller' => 'Acme\\CoreBundle\\Controller\\DefaultController::contactAnswerAction',));
+            }
+
         }
 
         // acme_core_backoffice

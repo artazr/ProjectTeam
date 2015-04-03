@@ -89,7 +89,8 @@ class DefaultController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($sponsor);
             $em->flush();
-            
+
+            return $this->redirect($this->generateUrl('acme_core_contactAnswer' , array( 'destinataire' => 'ContactEntreprise') ));
 
         }
 
@@ -109,6 +110,8 @@ class DefaultController extends Controller
             $em->persist($FeedBack);
             $em->flush();
 
+            return $this->redirect($this->generateUrl('acme_core_contactAnswer', array( 'destinataire' => 'ContactEntreprise') ));
+
         }
 
         return $this->render('AcmeCoreBundle:Default:feedback.html.twig', array( 'form' => $form->createView()));
@@ -122,6 +125,19 @@ class DefaultController extends Controller
     public function contactAction()
     {
         return $this->render('AcmeCoreBundle:Default:contact.html.twig');
+    }
+
+
+    public function contactAnswerAction($destinataire)
+    {
+
+        $ModifRepository = $this->getDoctrine()
+                ->getRepository('AcmeCoreBundle:Modif');
+        
+        $answer = $ModifRepository->getContenuFromEndroit($destinataire);
+
+
+        return $this->render('AcmeCoreBundle:Default:contactAnswer.html.twig', array( 'answer' => $answer ));
     }
 
 
