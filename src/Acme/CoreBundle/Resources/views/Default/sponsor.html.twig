@@ -3,19 +3,25 @@
 Sponsor
 {% endblock %}
  {% block stylesheet %}
- <link rel="stylesheet" href="{{ asset('css/perso.css') }}">
+ <link rel="stylesheet" href="{{ asset('css/persosponsor.css') }}">
 
  {% endblock %}
 
 {% block body %}
 {{contenu}}
 
+<h1 id="titre_sponsor">Nos sponsors</h1>
+
 <table style="margin-left: 0px;">
 	<tr>
 		<td>
-			{% for product in products %}
-   				 <img src="{{asset('logo/' ~product.imageName)}}" alt="" style="width:200px; height:200px; margin-left:40px;">
-			{% endfor %}
+			
+				{% for product in products %}
+				
+   					 <img src="{{asset('logo/' ~product.imageName)}}" alt="" style="width:200px; height:200px; margin-left:40px;" class="information" >
+   				
+				{% endfor %}
+			
 		</td>
 	</tr>
 </table>
