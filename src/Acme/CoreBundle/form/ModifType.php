@@ -20,7 +20,7 @@ class ModifType extends AbstractType
             array(
                 'Page Accueil' => array(
                     'Accueil - Sponsor' => 'Sponsor',
-                    'Accueil - Inscription' => 'Inscription',
+                    'Accueil - Description' => 'Description',
                     'Accueil - Contact' => 'Contact',
                     'Accueil - Junior ISEP' => 'Junior ISEP',
                 ),
