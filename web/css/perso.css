@@ -1,0 +1,29 @@
+.case{
+	height:350px;
+	width:40%;
+	display:inline-block;
+	margin-left:7%;
+	vertical-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 15px;
+}
+
+#etudiant{
+	background-image: url(../images/student_sage.png);
+
+}
+#etudiant:hover{
+	background-image: url(../images/meganfox.png);
+
+}
+#entreprise{
+	background-image: url(../images/defense.png);
+
+}
+
+.content{
+	text-align: center;
+	color:white;
+
+}

@@ -9,6 +9,13 @@ Contact
 
 {% block body %}
 
- <li><a href="{{ path('acme_core_contactentreprise') }}">Contact pour les entreprises</a></li>
- <li><a href="{{ path('acme_core_inscription') }}">inscription pour les étudiants</a></li>
+
+ 	<div class="case hvr-box-shadow-outset" id="etudiant">
+ 		<a href="{{ path('acme_core_contactentreprise') }}" class="content">coucou</a>
+ 	</div>
+
+ 	<div class="case hvr-box-shadow-outset" id="entreprise">
+ 		<a href="{{ path('acme_core_inscription') }}" class="content">coucou </a>
+ 	</div>
+
 {% endblock %}
