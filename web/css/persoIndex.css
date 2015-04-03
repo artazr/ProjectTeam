@@ -19,19 +19,21 @@
 		#img2{
 			border-radius: 10px;
 			margin: 10px;
-			background-image: url(../images/contact2.png);
+			background-image: url(../images/entreprise1.jpg);
 		}
 
 		#img3{
 			border-radius: 10px;
 			margin: 10px;
 			background-image: url(../images/junior.png);
+			
+
 		}
 
 		#img4{
 			border-radius: 10px;
 			margin: 10px;
-			background-image: url(../images/contact1.png);
+			background-image: url(../images/contact2.png);
 		}
 
 		.w{
@@ -64,4 +66,13 @@
 	padding:auto;
 }
 		
+.content{
+	text-align: center;
+	color:white;
+	margin:auto;
+	margin-top:50px;
+	font-weight: 900;
+	font-size:1.5em;
+	line-height: 1.5em;
+}
 

@@ -10,13 +10,10 @@
 }
 
 #etudiant{
-	background-image: url(../images/student_sage.png);
+	background-image: url(../images/student.png);
 
 }
-#etudiant:hover{
-	background-image: url(../images/meganfox.png);
 
-}
 #entreprise{
 	background-image: url(../images/defense.png);
 
@@ -25,5 +22,10 @@
 .content{
 	text-align: center;
 	color:white;
-
+	margin:auto;
+	margin-top:130px;
+	font-weight: 900;
+	font-size:1.7em;
+	line-height: 1.5em;
 }
+

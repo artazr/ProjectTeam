@@ -14,27 +14,35 @@ Accueil
 
 			<div id="wrapper-grid">
 				<a href="{{ path('acme_core_description') }}" title="Description">
-					<div class="square hvr-box-shadow-outset titre " id="img1" >
+					<div class="square hvr-box-shadow-outset titre " id="img1">
+						<div class="content">
 						{{ Inscription | raw }}
+						</div>
 					</div>
 				</a>
                 
                	<a href="{{ path('acme_core_sponsor') }}" title="Sponsors">	
                		<div class="square hvr-box-shadow-outset titre" id="img2">
-						{{ Sponsor | raw }}							
+               			<div class="content">
+						{{ Sponsor | raw }}	
+						</div>						
 					</div>
                 </a>
 
 				<a href="http://www.juniorisep.com" title="Junior ISEP">
                 	<div class="square hvr-box-shadow-outset titre" id="img3">
-						{{ JuniorISEP | raw }}
+                		<div class="content">
+						
+						</div>
 					</div>
 				</a>
 
 
 				<a href="{{ path('acme_core_contact') }}" title="Contact">
                 	<div class="square hvr-box-shadow-outset titre" id="img4">
+                		<div class="content">
 						{{ Contact | raw }}
+						</div>
 					</div>
 				</a>
 
