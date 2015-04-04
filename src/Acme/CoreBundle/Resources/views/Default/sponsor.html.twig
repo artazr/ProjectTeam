@@ -8,19 +8,21 @@ Sponsor
  {% endblock %}
 
 {% block body %}
-{{contenu}}
 
 <h1 id="titre_sponsor">Nos sponsors</h1>
+
+
+{{contenu | raw}}
 
 <table style="margin-left: 0px;">
 	<tr>
 		<td>
 			
 				{% for product in products %}
-
-		   					 	<img src="{{asset('logo/' ~product.imageName)}}" alt="" style="width:200px; height:200px; margin-left:40px;">
-                        	
-
+					<ul style="display : inline-block">
+						<li><img src="{{asset('logo/' ~product.imageName)}}" alt="" style="width:280px; height:200px; margin-left:40px;"></li>
+						<li style="text-align: center"><i>{{ product.nom }}</i></li>
+					</ul>
 				{% endfor %}
 			
 		</td>

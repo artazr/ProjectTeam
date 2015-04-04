@@ -25,7 +25,7 @@ Description
 									</section>
 									<section>
 										<header>
-											<h3>Evenement facebook - Page facebook</h3>
+											<h3>Evenement facebook </h3>
 										</header>
 										<p> <a href="https://www.facebook.com/events/420917201404680/" target ='_blank'><img src="{{asset('images/ProjectTeam.png')}}" alt="event" height="320px" /></a></p> <br />
 										
@@ -48,16 +48,29 @@ Description
 						<section class="4u 12u(narrower) feature">
 							
 									{{ inscription | raw}}
+
+							<ul class="actions">
+                            <li class="break"><a href="{{ path('acme_core_contact') }}" class="button">Participer</a></li>
+							</ul>
 							
 						</section>
 						<section class="4u 12u(narrower) feature">
 							
 									{{ sponsor | raw}}
+							<ul class="actions">
+                            <li class="break"><a href="{{ path('acme_core_sponsor') }}" class="button">Nos SPonsors</a></li>
+							</ul>
+
+
 
 						</section>
 						<section class="4u 12u(narrower) feature">
 
 									{{ partagez | raw}}
+
+							<ul class="actions">
+                            <li class="break"><a href="https://www.facebook.com/events/420917201404680/" class="button">Like & Share</a></li>
+							</ul>
 
 						</section>
 					</div>
