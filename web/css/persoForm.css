@@ -1,6 +1,12 @@
 .nom {
 text-align: center;
 }
+#buttonform{
+	margin-top: 20px;
+	margin-left: 20%;
+	padding: 0;
+}
+
 
 .form{
 margin-left: 20%;
@@ -9,9 +15,9 @@ width: 60%;
 button
 {
 display: inline-block;
-margin-left: 26%;
 margin-bottom: 10px;
 color: black;
+margin-left: 0;
 background: none;
 text-decoration: none;
 font-size: 1em;

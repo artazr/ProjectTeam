@@ -12,10 +12,9 @@ Contact Entreprise
 
 <form action="{{ path('acme_core_contactentreprise') }}" {{ form_enctype(form) }} method="POST">
         {{ form_row(form._token) }}
-    <table>
 
 <div class="nom">Nom de l'entreprise : </div>
- <div class="form">{{ form_widget(form.nom) }}</div>
+<div class="form">{{ form_widget(form.nom) }}</div>
 <br />
 
 <div class="nom"> Votre logo : <i>( il sera affiché en 280*200px )</i></div>
@@ -29,14 +28,12 @@ Contact Entreprise
 <br />
 
 <div class="nom">Remarques , informations et participations : </div>
- <div class="form">{{ form_widget(form.remarque) }}</div>
+<div class="form">{{ form_widget(form.remarque) }}</div>
 
-
-</table>
-    <div>
+<div id="buttonform">
         <button type="submit">Valider</button>
         <button type="button">Annuler</button>
-    </div>
+	
+</div>
 </form>
-
 {% endblock %}

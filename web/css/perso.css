@@ -1,8 +1,8 @@
 .case{
 	height:350px;
-	width:40%;
+	width:43%;
 	display:inline-block;
-	margin-left:7%;
+	margin-left:4%;
 	vertical-align: center;
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -28,3 +28,5 @@
 	font-size:1.7em;
 	line-height: 1.5em;
 }
+
+
