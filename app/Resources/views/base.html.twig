@@ -12,7 +12,6 @@
 
                 
                 <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" />
-                {% block stylesheet %}{% endblock %}    
     
         
 
@@ -20,6 +19,10 @@
                 <script src="{{ asset('js/jquery.min.js') }}"></script>
                 <script src="{{ asset('js/flipclock.js') }}"></script>
                 <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" /> 
+
+                <link rel="stylesheet" href="{{ asset('css/perso.css') }}">
+                
+                {% block stylesheet %}{% endblock %}    
        
         <style type="text/css">
             @font-face {
@@ -39,11 +42,11 @@
                 font-weight: 400;
                 font-size: 0.7em;
             }
-@media screen and (max-width: 1140px) {
-    #nav {
-        display: none;
-    }
-}
+            @media screen and (max-width: 1140px) {
+                #nav {
+                    display: none;
+                }
+            }
 
         </style>
 
@@ -137,6 +140,7 @@
         <script src="{{ asset('js/skel.min.js') }}"></script>
         <script src="{{ asset('js/skel-layers.min.js') }}j"></script>
         <script src="{{ asset('js/init.js') }}"></script>
+
 
     </body>
 </html>

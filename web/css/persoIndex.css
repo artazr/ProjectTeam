@@ -1,76 +1,69 @@
-		.square{
-			float : left;
-			position: relative;
-			width: 35%;
-			height:190px;
-			padding-bottom: 1%;
-			margin:auto;
-			background-position: center center;
-			background-repeat: no-repeat;
-			background-size:cover;	
-		}
-
-		@media screen and (max-width: 630px) {
-    		.square{
-				width: 80%;
-			}
-		}
-
-		#img1{
-			background-image: url(../images/isep1.png);
-			border-radius: 10px;
-			margin: 40px;
-			background-size: 100% 100%;
-		}
-
-		#img2{
-			border-radius: 10px;
-			margin: 40px;
-			background-image: url(../images/entreprise1.jpg);
-			background-size: 100% 100%;
-		}
-
-		#img3{
-			border-radius: 10px;
-			margin: 40px;
-			background-image: url(../images/junior4.png);
-			background-size: 100% 100%;
-			
-
-		}
-
-		#img4{
-			border-radius: 10px;
-			margin: 40px;
-			background-image: url(../images/contact2.png);
-			background-size: 100% 100%;
-		}
-
-		.w{
-			text-align: center;
-			color:white;
-			font-size: 30px;
-			font-family: Arial;
-		}
-
-		#img4 #b{
-			color:black;
-		}
-
-		h4{
-			text-align: center;
-			color:white;
-			font-size: 20px;
-			font-style: italic;
-		}
-		#img4 h4{
-			color:black;
-		}
-		
-
-.clock > .flip-clock-divider > .flip-clock-label{
-	display: none;
+.square{
+	float : left;
+	position: relative;
+	width: 35%;
+	height:190px;
+	padding-bottom: 1%;
+	margin:auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size:cover;	
+	border-radius: 10px;
+	margin: 40px;
+	background-size: 100% 100%;
 }
+
+#wrapper-grid{
+	margin-left:15%;
+}
+
+@media screen and (max-width: 645px) {
+	.square{
+		width: 79%;
+		margin-left: 10%;
+	}
+	#wrapper-grid{
+		margin: 0%;
+		padding: 0;
+	}
+
+}
+
+#img1{
+	background-image: url(../images/isep1.png);
+}
+
+#img2{
+	background-image: url(../images/entreprise1.jpg);
+}
+#img3{
+	background-image: url(../images/junior4.png);
+}
+#img4{
+	background-image: url(../images/contact2.png);
+}
+
+.w{
+	text-align: center;
+	color:white;
+	font-size: 30px;
+	font-family: Arial;
+}
+
+#img4 #b{
+	color:black;
+}
+
+h4{
+	text-align: center;
+	color:white;
+	font-size: 20px;
+	font-style: italic;
+}
+#img4 h4{
+	color:black;
+}
+	
 
 
 .titre{
@@ -88,7 +81,4 @@
 	font-weight: 900;
 	font-size:1.5em;
 	line-height: 1.5em;
-}
-#wrapper-grid{
-	margin-left:15%;
 }

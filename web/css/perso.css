@@ -1,13 +1,69 @@
-.case{
-	height:350px;
-	width:43%;
-	display:inline-block;
-	margin-left:4%;
-	vertical-align: center;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	border-radius: 15px;
+@media screen and (max-width: 660px) {
+	.clock > .flip-clock-divider > .flip-clock-label{
+		display: none;
+	}
+	.minutes{
+		display: block;
+		width: 90%;
+		height: 0px;
+		margin:0%;
+	}
+	.minutes > .flip-clock-dot{
+		background: #4a7f79;
+		box-shadow: 0 0 0 0 ;
+		border-radius: 0;
+	}
 }
+@media screen and (max-width: 360px) {
+	.heures{
+		display: block;
+		width: 90%;
+		height: 0px;
+	}
+	.heures > .flip-clock-dot{
+		background: #4a7f79;
+		box-shadow: 0 0 0 0 ;
+		border-radius: 0;
+	}
+	.secondes{
+		display: block;
+		width: 90%;
+		height: 0px;
+	}
+	.secondes > .flip-clock-dot{
+		background: #4a7f79;
+		box-shadow: 0 0 0 0 ;
+		border-radius: 0;
+	}
+}
+
+.clock{
+	margin-left: 35%;
+}
+@media screen and (max-width: 1620px) {	
+	.clock{
+		margin-left: 30%;
+	}
+}
+@media screen and (max-width: 1200px) {	
+	.clock{
+		margin-left: 25%;
+	}
+}
+@media screen and (max-width: 900px) {	
+	.clock{
+		margin-left: 20%;
+	}
+}
+@media screen and (max-width: 835px) {	
+	.clock{
+		margin-left: 0%;
+	}
+}
+
+
+
+
 
 #etudiant{
 	background-image: url(../images/student.png);
@@ -28,5 +84,3 @@
 	font-size:1.7em;
 	line-height: 1.5em;
 }
-
-
