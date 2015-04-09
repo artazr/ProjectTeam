@@ -45,10 +45,18 @@
 	.case2{
 		font-size: 0.7em;
 	}
+
+	#junior{
+		display:none;
+	}
 }
 @media screen and (max-width: 460px) {	
 	.case2{
 		font-size: 0.4em;
+	}
+
+	#junior{
+		display:inline-block;
 	}
 }
 @media screen and (max-width: 360px) {
