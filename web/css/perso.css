@@ -14,6 +14,43 @@
 		border-radius: 0;
 	}
 }
+
+.clock{
+	margin-left: 35%;
+}
+@media screen and (max-width: 1620px) {	
+	.clock{
+		margin-left: 30%;
+	}
+}
+@media screen and (max-width: 1200px) {	
+	.clock{
+		margin-left: 25%;
+	}
+}
+@media screen and (max-width: 900px) {	
+	.clock{
+		margin-left: 20%;
+	}
+}
+@media screen and (max-width: 840px) {	
+	.clock{
+		margin-left: 15%;
+	}
+}
+@media screen and (max-width: 760px) {	
+	.clock{
+		margin-left: 0%;
+	}
+	.case2{
+		font-size: 0.7em;
+	}
+}
+@media screen and (max-width: 460px) {	
+	.case2{
+		font-size: 0.4em;
+	}
+}
 @media screen and (max-width: 360px) {
 	.heures{
 		display: block;
@@ -35,29 +72,11 @@
 		box-shadow: 0 0 0 0 ;
 		border-radius: 0;
 	}
-}
-
-.clock{
-	margin-left: 35%;
-}
-@media screen and (max-width: 1620px) {	
 	.clock{
-		margin-left: 30%;
+		margin-left: 15%;
 	}
-}
-@media screen and (max-width: 1200px) {	
-	.clock{
-		margin-left: 25%;
-	}
-}
-@media screen and (max-width: 900px) {	
-	.clock{
-		margin-left: 20%;
-	}
-}
-@media screen and (max-width: 835px) {	
-	.clock{
-		margin-left: 0%;
+	#junior{
+		display:none;
 	}
 }
 
@@ -83,4 +102,73 @@
 	font-weight: 900;
 	font-size:1.7em;
 	line-height: 1.5em;
+}
+
+.nom {
+text-align: center;
+}
+#buttonform{
+	margin-top: 20px;
+	margin-left: 20%;
+	padding: 0;
+}
+
+
+.form{
+margin-left: 20%;
+width: 60%;
+}
+button
+{
+display: inline-block;
+margin-bottom: 10px;
+color: black;
+margin-left: 0;
+background: none;
+text-decoration: none;
+font-size: 1em;
+border-radius: 0.35em;
+padding: 2em 2em 2em 2em;
+cursor: pointer;
+outline: 0;
+-moz-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+-webkit-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+-o-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+-ms-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover
+{
+
+background-color: white;
+border-color: black;
+}
+
+.image{
+width: 200px;
+height: 200px;
+margin-left: 20px;
+vertical-align: bottom;
+}
+
+#titre_sponsor{
+	text-align:center;
+	margin:20px;
+	font-size: 2em;
+	font-weight: 700;
+}
+
+.case2{
+	height:350px;
+	width:40%;
+	display:inline-block;
+	margin-left:7%;
+	vertical-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 15px;
 }
